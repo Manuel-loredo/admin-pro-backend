@@ -5,7 +5,7 @@ const validarJWT = (req, res, next) => {
 
 //leer token
 const token = req.header('x-token');
-    console.log(token);
+    
 
     if(!token) {
         return res.status(401).json({
@@ -26,7 +26,7 @@ const token = req.header('x-token');
             ok: false,
             msg: 'Token no valido'
         });
-        
+
     }
 
     
